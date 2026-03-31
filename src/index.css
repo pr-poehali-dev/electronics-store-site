@@ -56,7 +56,7 @@
 
   body {
     @apply bg-background text-foreground font-body;
-    background-color: #0a0a0a;
+    background-color: #110e0a;
     color: #ede8dc;
   }
 
@@ -99,15 +99,18 @@
   }
 
   .card-luxury {
-    background: linear-gradient(145deg, #181818 0%, #202020 100%);
-    border: 1px solid rgba(201, 168, 76, 0.12);
-    border-radius: 18px;
+    background: linear-gradient(145deg, #1c1710 0%, #221c14 100%);
+    border: 1px solid rgba(201, 168, 76, 0.14);
+    border-radius: 20px;
     transition: all 0.4s ease;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   }
 
   .card-luxury:hover {
-    border-color: rgba(201, 168, 76, 0.4);
-    box-shadow: 0 16px 56px rgba(201, 168, 76, 0.1);
+    border-color: rgba(201, 168, 76, 0.45);
+    box-shadow:
+      0 20px 60px rgba(201, 168, 76, 0.12),
+      0 4px 16px rgba(0, 0, 0, 0.4);
     transform: translateY(-6px);
   }
 

@@ -55,10 +55,10 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] font-body text-[#EDE8DC]">
+    <div className="min-h-screen bg-[#110e0a] font-body text-[#EDE8DC]">
 
       {/* NAV */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/95 backdrop-blur-md border-b border-white/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#110e0a]/95 backdrop-blur-md border-b border-[#C9A84C]/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-full gold-gradient flex items-center justify-center">
@@ -114,8 +114,8 @@ export default function Index() {
         <>
           {/* HERO */}
           <section className="relative min-h-screen flex items-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#111111] to-[#0A0A0A]" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#110e0a] via-[#1a1409] to-[#110e0a]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#110e0a]/95 via-[#110e0a]/50 to-transparent" />
 
             {/* Charon+ image right side */}
             <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 flex items-center justify-center">
@@ -124,7 +124,7 @@ export default function Index() {
                 alt="Charon +"
                 className="w-full h-full object-cover opacity-60 md:opacity-80"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/30 to-transparent md:via-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#110e0a] via-[#110e0a]/30 to-transparent md:via-transparent" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16">
