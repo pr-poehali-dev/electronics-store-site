@@ -8,62 +8,16 @@ const NAV_ITEMS = ['Главная', 'Каталог', 'Контакты'];
 const PRODUCTS = [
   {
     id: 1,
-    name: 'Sony WH-1000XM5',
-    category: 'Наушники',
-    price: '42 900 ₽',
-    oldPrice: '54 900 ₽',
-    tag: 'Скидка',
-    desc: 'Флагманское шумоподавление нового поколения с 30 ч автономной работы',
-    icon: 'Headphones',
-  },
-  {
-    id: 2,
-    name: 'Apple MacBook Pro 16"',
-    category: 'Ноутбуки',
-    price: '289 900 ₽',
+    name: 'Charon +',
+    category: 'Электроника',
+    price: '',
     tag: 'Новинка',
-    desc: 'M3 Pro · 18 ГБ RAM · Дисплей Liquid Retina XDR с ProMotion 120 Гц',
-    icon: 'Laptop',
-  },
-  {
-    id: 3,
-    name: 'Samsung Frame 65"',
-    category: 'Телевизоры',
-    price: '149 900 ₽',
-    oldPrice: '179 900 ₽',
-    tag: 'Скидка',
-    desc: 'QLED 4K · Режим "Картина" · Ультратонкий дизайн без видимых проводов',
-    icon: 'Monitor',
-  },
-  {
-    id: 4,
-    name: 'iPad Pro 13" M4',
-    category: 'Планшеты',
-    price: '134 990 ₽',
-    tag: 'Новинка',
-    desc: 'Наноструктурное стекло · Ultra Retina XDR · Тоньше карандаша Apple',
-    icon: 'Tablet',
-  },
-  {
-    id: 5,
-    name: 'Bose QuietComfort Ultra',
-    category: 'Наушники',
-    price: '38 990 ₽',
-    desc: 'Пространственный звук · Персонализированное шумоподавление · 24 ч',
-    icon: 'Headphones',
-  },
-  {
-    id: 6,
-    name: 'Sony A7 IV',
-    category: 'Фотокамеры',
-    price: '219 990 ₽',
-    tag: 'Хит',
-    desc: '33 МП · 4K 60fps · 693 точки автофокуса · Профессиональный уровень',
-    icon: 'Camera',
+    desc: '',
+    icon: 'Zap',
   },
 ];
 
-const CATEGORIES = ['Все', 'Наушники', 'Ноутбуки', 'Телевизоры', 'Планшеты', 'Фотокамеры'];
+const CATEGORIES = ['Все', 'Электроника'];
 
 export default function Index() {
   const [activePage, setActivePage] = useState('Главная');
