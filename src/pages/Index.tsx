@@ -62,10 +62,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-full gold-gradient flex items-center justify-center">
-              <span className="text-[#0A0A0A] text-xs font-bold">L</span>
+              <span className="text-[#0A0A0A] text-xs font-bold">P</span>
             </div>
-            <span className="font-display text-xl tracking-widest text-[#EDE8DC]">LUXE</span>
-            <span className="font-body text-[0.6rem] tracking-[0.25em] text-[#C9A84C] uppercase mt-1">Electronics</span>
+            <span className="font-display text-xl tracking-widest text-[#EDE8DC]">POD-18</span>
           </div>
 
           <div className="hidden md:flex items-center gap-10">
@@ -413,9 +412,9 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 rounded-full gold-gradient flex items-center justify-center">
-              <span className="text-[#0A0A0A] text-[10px] font-bold">L</span>
+              <span className="text-[#0A0A0A] text-[10px] font-bold">P</span>
             </div>
-            <span className="font-display text-lg tracking-widest text-[#EDE8DC]/70">LUXE Electronics</span>
+            <span className="font-display text-lg tracking-widest text-[#EDE8DC]/70">POD-18</span>
           </div>
           <p className="text-[0.6rem] tracking-widest text-[#EDE8DC]/25 uppercase">
             © 2026 · Все права защищены
