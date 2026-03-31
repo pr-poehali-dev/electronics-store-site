@@ -10,9 +10,9 @@ const PRODUCTS = [
     id: 1,
     name: 'Charon +',
     category: 'Электроника',
-    price: '',
+    price: '300 ₽',
     tag: 'Новинка',
-    desc: '',
+    desc: 'чарон бейби плюс',
     icon: 'Zap',
   },
 ];
