@@ -30,21 +30,17 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-const CATEGORIES = ['Все', 'Электроника'];
+
 
 export default function Index() {
   const [activePage, setActivePage] = useState('Главная');
-  const [activeCategory, setActiveCategory] = useState('Все');
+
   const [notifyEmail, setNotifyEmail] = useState('');
   const [notifyType, setNotifyType] = useState({ arrival: true, discount: true });
   const [notifySent, setNotifySent] = useState(false);
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
   const [contactSent, setContactSent] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const filteredProducts = activeCategory === 'Все'
-    ? PRODUCTS
-    : PRODUCTS.filter(p => p.category === activeCategory);
 
   const handleNotifySubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +81,7 @@ export default function Index() {
           </div>
 
           <div className="flex items-center gap-4">
-            <button className="hidden md:flex btn-outline-gold px-5 py-2 rounded-sm text-xs items-center gap-2">
+            <button className="hidden md:flex btn-outline-gold px-5 py-2 rounded-xl text-xs items-center gap-2">
               <Icon name="ShoppingBag" size={13} />
               <span>Корзина</span>
             </button>
@@ -147,13 +143,13 @@ export default function Index() {
                 <div className="flex flex-wrap gap-4">
                   <button
                     onClick={() => setActivePage('Каталог')}
-                    className="btn-gold px-8 py-3.5 rounded-sm"
+                    className="btn-gold px-8 py-3.5 rounded-xl"
                   >
                     Смотреть каталог
                   </button>
                   <button
                     onClick={() => setActivePage('Контакты')}
-                    className="btn-outline-gold px-8 py-3.5 rounded-sm"
+                    className="btn-outline-gold px-8 py-3.5 rounded-xl"
                   >
                     Связаться
                   </button>
@@ -171,7 +167,7 @@ export default function Index() {
               </div>
               <button
                 onClick={() => setActivePage('Каталог')}
-                className="hidden md:flex btn-outline-gold px-6 py-2.5 rounded-sm items-center gap-2"
+                className="hidden md:flex btn-outline-gold px-6 py-2.5 rounded-xl items-center gap-2"
               >
                 Все товары
                 <Icon name="ArrowRight" size={12} />
@@ -180,7 +176,7 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {PRODUCTS.slice(0, 3).map((product) => (
-                <div key={product.id} className="card-luxury rounded-sm overflow-hidden group cursor-pointer">
+                <div key={product.id} className="card-luxury rounded-xl overflow-hidden group cursor-pointer">
                   <div className="h-52 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative overflow-hidden">
                     {product.image
                       ? <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
@@ -203,7 +199,7 @@ export default function Index() {
                           <span className="ml-2 text-xs text-[#EDE8DC]/30 line-through">{product.oldPrice}</span>
                         )}
                       </div>
-                      <button className="btn-gold px-4 py-2 rounded-sm">В корзину</button>
+                      <button className="btn-gold px-4 py-2 rounded-xl">В корзину</button>
                     </div>
                   </div>
                 </div>
@@ -254,9 +250,9 @@ export default function Index() {
                         value={notifyEmail}
                         onChange={e => setNotifyEmail(e.target.value)}
                         placeholder="Ваш email"
-                        className="flex-1 bg-[#141414] border border-[#C9A84C]/20 text-[#EDE8DC] placeholder-[#EDE8DC]/25 text-sm px-4 py-3 rounded-sm focus:outline-none focus:border-[#C9A84C]/60"
+                        className="flex-1 bg-[#141414] border border-[#C9A84C]/20 text-[#EDE8DC] placeholder-[#EDE8DC]/25 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-[#C9A84C]/60"
                       />
-                      <button type="submit" className="btn-gold px-6 py-3 rounded-sm whitespace-nowrap">
+                      <button type="submit" className="btn-gold px-6 py-3 rounded-xl whitespace-nowrap">
                         Подписаться
                       </button>
                     </div>
@@ -278,23 +274,9 @@ export default function Index() {
 
           <div className="divider-gold mb-10" />
 
-          <div className="flex flex-wrap gap-3 mb-12">
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 rounded-sm text-[0.65rem] tracking-[0.15em] uppercase transition-all duration-300 ${
-                  activeCategory === cat ? 'btn-gold' : 'btn-outline-gold'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="card-luxury rounded-sm overflow-hidden group cursor-pointer">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PRODUCTS.map((product) => (
+              <div key={product.id} className="card-luxury rounded-xl overflow-hidden group cursor-pointer">
                 <div className="h-48 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative overflow-hidden">
                   {product.image
                     ? <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
@@ -317,7 +299,7 @@ export default function Index() {
                         <span className="ml-2 text-xs text-[#EDE8DC]/30 line-through">{product.oldPrice}</span>
                       )}
                     </div>
-                    <button className="btn-gold px-4 py-2 rounded-sm">В корзину</button>
+                    <button className="btn-gold px-4 py-2 rounded-xl">В корзину</button>
                   </div>
                 </div>
               </div>
@@ -359,7 +341,7 @@ export default function Index() {
                 { icon: 'Clock', title: 'Часы работы', val: 'Пн–Вс: 10:00 — 21:00' },
               ].map(({ icon, title, val }) => (
                 <div key={title} className="flex items-start gap-4">
-                  <div className="w-9 h-9 rounded-sm border border-[#C9A84C]/25 flex items-center justify-center shrink-0">
+                  <div className="w-9 h-9 rounded-xl border border-[#C9A84C]/25 flex items-center justify-center shrink-0">
                     <Icon name={icon as 'MapPin'} size={15} className="text-[#C9A84C]" />
                   </div>
                   <div>
@@ -370,14 +352,14 @@ export default function Index() {
               ))}
             </div>
 
-            <div className="card-luxury rounded-sm p-8">
+            <div className="card-luxury rounded-xl p-8">
               <h3 className="font-display text-2xl font-light text-[#EDE8DC] mb-6">Написать нам</h3>
               {contactSent ? (
                 <div className="flex flex-col items-center justify-center h-48 gap-4 text-center">
                   <Icon name="CheckCircle" size={36} className="text-[#C9A84C]" />
                   <p className="font-display text-2xl font-light text-[#EDE8DC]">Сообщение отправлено</p>
                   <p className="text-xs text-[#EDE8DC]/45">Мы свяжемся с вами в ближайшее время</p>
-                  <button onClick={() => setContactSent(false)} className="btn-outline-gold px-5 py-2 rounded-sm mt-2">
+                  <button onClick={() => setContactSent(false)} className="btn-outline-gold px-5 py-2 rounded-xl mt-2">
                     Написать ещё
                   </button>
                 </div>
@@ -391,7 +373,7 @@ export default function Index() {
                       value={contactForm.name}
                       onChange={e => setContactForm(f => ({ ...f, name: e.target.value }))}
                       placeholder="Ваше имя"
-                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-sm focus:outline-none focus:border-[#C9A84C]/50"
+                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-[#C9A84C]/50"
                     />
                   </div>
                   <div>
@@ -402,7 +384,7 @@ export default function Index() {
                       value={contactForm.email}
                       onChange={e => setContactForm(f => ({ ...f, email: e.target.value }))}
                       placeholder="your@email.com"
-                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-sm focus:outline-none focus:border-[#C9A84C]/50"
+                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-[#C9A84C]/50"
                     />
                   </div>
                   <div>
@@ -413,10 +395,10 @@ export default function Index() {
                       value={contactForm.message}
                       onChange={e => setContactForm(f => ({ ...f, message: e.target.value }))}
                       placeholder="Ваш вопрос или пожелание..."
-                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-sm focus:outline-none focus:border-[#C9A84C]/50 resize-none"
+                      className="w-full bg-[#111111] border border-[#C9A84C]/15 text-[#EDE8DC] placeholder-[#EDE8DC]/20 text-sm px-4 py-3 rounded-xl focus:outline-none focus:border-[#C9A84C]/50 resize-none"
                     />
                   </div>
-                  <button type="submit" className="btn-gold w-full py-3.5 rounded-sm">
+                  <button type="submit" className="btn-gold w-full py-3.5 rounded-xl">
                     Отправить сообщение
                   </button>
                 </form>

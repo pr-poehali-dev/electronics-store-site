@@ -99,47 +99,50 @@
   }
 
   .card-luxury {
-    background: linear-gradient(145deg, #141414 0%, #1a1a1a 100%);
-    border: 1px solid rgba(201, 168, 76, 0.15);
+    background: linear-gradient(145deg, #181818 0%, #202020 100%);
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-radius: 18px;
     transition: all 0.4s ease;
   }
 
   .card-luxury:hover {
-    border-color: rgba(201, 168, 76, 0.5);
-    box-shadow: 0 8px 40px rgba(201, 168, 76, 0.08);
-    transform: translateY(-4px);
+    border-color: rgba(201, 168, 76, 0.4);
+    box-shadow: 0 16px 56px rgba(201, 168, 76, 0.1);
+    transform: translateY(-6px);
   }
 
   .btn-gold {
     background: linear-gradient(135deg, #c9a84c, #e2c97e);
     color: #0a0a0a;
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
+    border-radius: 12px;
     transition: all 0.3s ease;
   }
 
   .btn-gold:hover {
     background: linear-gradient(135deg, #e2c97e, #c9a84c);
-    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+    box-shadow: 0 6px 24px rgba(201, 168, 76, 0.4);
+    transform: translateY(-2px);
   }
 
   .btn-outline-gold {
-    border: 1px solid rgba(201, 168, 76, 0.6);
+    border: 1.5px solid rgba(201, 168, 76, 0.5);
     color: var(--gold);
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
+    border-radius: 12px;
     transition: all 0.3s ease;
   }
 
   .btn-outline-gold:hover {
-    background: rgba(201, 168, 76, 0.08);
+    background: rgba(201, 168, 76, 0.1);
     border-color: var(--gold);
+    transform: translateY(-2px);
   }
 
   .divider-gold {
@@ -147,16 +150,15 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(201, 168, 76, 0.4),
+      rgba(201, 168, 76, 0.35),
       transparent
     );
   }
 
   .nav-link {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
     color: rgba(237, 232, 220, 0.65);
     transition: color 0.3s ease;
     position: relative;
@@ -168,8 +170,9 @@
     bottom: -3px;
     left: 0;
     width: 0;
-    height: 1px;
+    height: 2px;
     background: var(--gold);
+    border-radius: 2px;
     transition: width 0.3s ease;
   }
 
@@ -186,9 +189,10 @@
   .badge-new {
     background: linear-gradient(135deg, #c9a84c, #e2c97e);
     color: #0a0a0a;
-    font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    font-weight: 600;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    border-radius: 8px;
   }
 
   .noise-overlay {
