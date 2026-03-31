@@ -118,15 +118,21 @@ export default function Index() {
         <>
           {/* HERO */}
           <section className="relative min-h-screen flex items-center overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${HERO_IMAGE})` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#111111] to-[#0A0A0A]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent" />
+
+            {/* Charon+ image right side */}
+            <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 flex items-center justify-center">
+              <img
+                src="https://plantobacco.com/upload/iblock/44a/ilb7rqszgtw7uf8xhcl92v13mwh9oh3e/54290041533Uxs9pcB4ZI-768x403-1.jpg"
+                alt="Charon +"
+                className="w-full h-full object-cover opacity-60 md:opacity-80"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/30 to-transparent md:via-transparent" />
+            </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16">
-              <div className="max-w-2xl animate-fade-in">
+              <div className="max-w-xl animate-fade-in">
                 <p className="font-body text-[0.65rem] tracking-[0.35em] uppercase text-[#C9A84C] mb-6">
                   Премиум электроника
                 </p>
@@ -153,28 +159,6 @@ export default function Index() {
                   </button>
                 </div>
               </div>
-            </div>
-
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-              <span className="text-[0.6rem] tracking-[0.2em] uppercase">Прокрутить</span>
-              <div className="w-px h-8 bg-gradient-to-b from-[#C9A84C] to-transparent" />
-            </div>
-          </section>
-
-          {/* STATS */}
-          <section className="border-y border-white/5 bg-[#0D0D0D]">
-            <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { val: '500+', label: 'Товаров в каталоге' },
-                { val: '12', label: 'Премиум брендов' },
-                { val: '5 лет', label: 'На рынке' },
-                { val: '4.9★', label: 'Рейтинг клиентов' },
-              ].map((s) => (
-                <div key={s.label} className="text-center">
-                  <div className="font-display text-4xl font-light text-[#C9A84C] mb-1">{s.val}</div>
-                  <div className="text-[0.65rem] tracking-[0.15em] uppercase text-[#EDE8DC]/40">{s.label}</div>
-                </div>
-              ))}
             </div>
           </section>
 
