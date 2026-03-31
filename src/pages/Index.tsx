@@ -5,7 +5,19 @@ const HERO_IMAGE = 'https://cdn.poehali.dev/projects/6aba3e9b-6a86-41b1-ac21-2fb
 
 const NAV_ITEMS = ['Главная', 'Каталог', 'Контакты'];
 
-const PRODUCTS = [
+interface Product {
+  id: number;
+  name: string;
+  category: string;
+  price: string;
+  oldPrice?: string;
+  tag?: string;
+  desc: string;
+  icon: string;
+  image?: string;
+}
+
+const PRODUCTS: Product[] = [
   {
     id: 1,
     name: 'Charon +',
@@ -14,6 +26,7 @@ const PRODUCTS = [
     tag: 'Новинка',
     desc: 'чарон бейби плюс',
     icon: 'Zap',
+    image: 'https://plantobacco.com/upload/iblock/44a/ilb7rqszgtw7uf8xhcl92v13mwh9oh3e/54290041533Uxs9pcB4ZI-768x403-1.jpg',
   },
 ];
 
@@ -184,8 +197,11 @@ export default function Index() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {PRODUCTS.slice(0, 3).map((product) => (
                 <div key={product.id} className="card-luxury rounded-sm overflow-hidden group cursor-pointer">
-                  <div className="h-52 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative">
-                    <Icon name={product.icon as 'Headphones'} size={64} className="text-[#C9A84C]/20 group-hover:text-[#C9A84C]/35 transition-colors duration-500" />
+                  <div className="h-52 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative overflow-hidden">
+                    {product.image
+                      ? <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                      : <Icon name={product.icon as 'Headphones'} size={64} className="text-[#C9A84C]/20 group-hover:text-[#C9A84C]/35 transition-colors duration-500" />
+                    }
                     {product.tag && (
                       <span className="badge-new absolute top-4 right-4 px-2.5 py-1 rounded-[2px] uppercase tracking-widest text-[0.55rem]">
                         {product.tag}
@@ -295,8 +311,11 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product) => (
               <div key={product.id} className="card-luxury rounded-sm overflow-hidden group cursor-pointer">
-                <div className="h-48 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative">
-                  <Icon name={product.icon as 'Headphones'} size={56} className="text-[#C9A84C]/20 group-hover:text-[#C9A84C]/35 transition-colors duration-500" />
+                <div className="h-48 bg-gradient-to-br from-[#1A1A1A] to-[#111111] flex items-center justify-center relative overflow-hidden">
+                  {product.image
+                    ? <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                    : <Icon name={product.icon as 'Headphones'} size={56} className="text-[#C9A84C]/20 group-hover:text-[#C9A84C]/35 transition-colors duration-500" />
+                  }
                   {product.tag && (
                     <span className="badge-new absolute top-4 right-4 px-2.5 py-1 rounded-[2px] uppercase tracking-widest text-[0.55rem]">
                       {product.tag}
