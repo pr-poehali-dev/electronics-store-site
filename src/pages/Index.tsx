@@ -198,7 +198,7 @@ export default function Index() {
                           <span className="ml-2 text-xs text-[#EDE8DC]/30 line-through">{product.oldPrice}</span>
                         )}
                       </div>
-                      <button className="btn-gold px-4 py-2 rounded-xl">В корзину</button>
+                      <a href="https://t.me/+t2iXGi-UrF05Nzgy" target="_blank" rel="noopener noreferrer" className="btn-gold px-4 py-2 rounded-xl">Купить</a>
                     </div>
                   </div>
                 </div>
@@ -298,7 +298,7 @@ export default function Index() {
                         <span className="ml-2 text-xs text-[#EDE8DC]/30 line-through">{product.oldPrice}</span>
                       )}
                     </div>
-                    <button className="btn-gold px-4 py-2 rounded-xl">В корзину</button>
+                    <a href="https://t.me/+t2iXGi-UrF05Nzgy" target="_blank" rel="noopener noreferrer" className="btn-gold px-4 py-2 rounded-xl">Купить</a>
                   </div>
                 </div>
               </div>
