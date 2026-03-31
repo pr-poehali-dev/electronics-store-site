@@ -353,9 +353,9 @@ export default function Index() {
               </div>
 
               {[
-                { icon: 'MapPin', title: 'Адрес', val: 'Москва, ул. Тверская, 15' },
-                { icon: 'Phone', title: 'Телефон', val: '+7 (495) 000-00-00' },
-                { icon: 'Mail', title: 'Email', val: 'hello@luxe-electronics.ru' },
+                { icon: 'MapPin', title: 'Адрес', val: 'Саратов' },
+                { icon: 'Phone', title: 'Телефон', val: '+7 (904) 244-18-42' },
+                { icon: 'Mail', title: 'Email', val: 'sidenkosar3@gmail.com' },
                 { icon: 'Clock', title: 'Часы работы', val: 'Пн–Вс: 10:00 — 21:00' },
               ].map(({ icon, title, val }) => (
                 <div key={title} className="flex items-start gap-4">
